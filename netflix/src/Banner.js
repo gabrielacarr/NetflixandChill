@@ -35,25 +35,14 @@ function Banner() {
       }}
     >
       <div className="bannerContents">
-        <h1 className="bannerTitle">Banner Title</h1>
+        <h1 className="bannerTitle">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
         <div className="bannerButtons">
           <button className="bannerButton">Play</button>
           <button className="bannerButton">My List</button>
         </div>
-        <h1 className="bannerDescription">
-          {truncate(
-            ` Cotton candy brownie sweet roll marshmallow danish bonbon pie danish muffin. 
-        Gummi bears gummi bears ice cream carrot cake cake donut brownie cotton candy bear claw. 
-        Chupa chups chocolate cake carrot cake brownie marzipan soufflé gingerbread gingerbread gummies.
-        Macaroon gummies icing dragée pie. 
-        Jelly-o carrot cake bear claw dessert lemon drops liquorice. 
-        Halvah jelly-o sweet brownie. 
-        Marshmallow brownie cupcake ice cream liquorice. 
-        Icing cotton candy croissant cookie muffin. 
-        Icing jujubes macaroon cupcake gummies sesame snaps soufflé pastry.`,
-            150
-          )}
-        </h1>
+        <h1 className="bannerDescription">{truncate(movie?.overview, 150)}</h1>
       </div>
 
       <div className="banner--fadeBottom" />
