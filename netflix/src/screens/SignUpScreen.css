@@ -45,3 +45,8 @@
   border: none;
   cursor: pointer;
 }
+
+.signUpScreenLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
